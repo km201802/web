@@ -1,3 +1,4 @@
+document.getElementById("p").innerHTML = "HI";
 var xml = new XMLHttpRequest();
 try{
 xml.onreadystatechange = function(){
@@ -10,3 +11,6 @@ xml.onreadystatechange = function(){
 catch(e){
     document.getElementById("p").innerHTML = e;
 }
+
+xml.open('GET', '../json/person.json', true);
+xml.send();
